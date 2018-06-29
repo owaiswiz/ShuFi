@@ -13,6 +13,7 @@ import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 import ManageDevices from '../src/components/ManageDevices.vue'
+import AddDevice from '../src/components/AddDevice.vue'
 
 Vue.use(TurbolinksAdapter)
 
@@ -39,7 +40,8 @@ document.addEventListener('turbolinks:load', () => {
     
     components: {
       App,
-      ManageDevices
+      ManageDevices,
+      AddDevice
     }
   })
 })
