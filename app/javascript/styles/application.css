@@ -14,4 +14,11 @@
     100% { transform: rotate(360deg); }
 }
 
+.primary-input {
+  @apply rounded-full text-grey-darker border-2 border-indigo;
+}
+.primary-input:focus {
+  @apply outline-none shadow-outline;
+}
+
 @tailwind utilities;

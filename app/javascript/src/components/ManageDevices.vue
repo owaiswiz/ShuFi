@@ -8,7 +8,7 @@
 
       <div v-else class="flex-grow flex items-center justify-between">
         <div v-if="!device.editing" class="text-md  py-2 mx-4">{{ device.name }}</div>
-        <input v-else v-model="device.mac" class="flex-grow px-4 py-2 mx-4 w-full rounded-full text-grey-darker text-sm border-2 border-indigo focus:outline-none"
+        <input v-else v-model="device.mac" class="primary-input flex-grow px-4 py-2 mx-4 w-full text-sm"
           type="text" placeholder="Mac Address">
 
         <div class="flex items-baseline cursor-pointer text-sm select-none">
