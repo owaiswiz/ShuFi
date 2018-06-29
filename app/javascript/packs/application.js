@@ -12,6 +12,7 @@ import 'application.css'
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
+import ManageDevices from '../src/components/ManageDevices.vue'
 
 Vue.use(TurbolinksAdapter)
 
@@ -35,22 +36,10 @@ document.addEventListener('turbolinks:load', () => {
         }
       ]
     },
-    methods: {
-      allow(device) {
-        console.log(device)
-        device.loading = true
-        setTimeout(() => device.loading = false, 1000)
-      },
-      deny(device) {
-        device.loading = true
-        setTimeout(() => device.loading = false, 2000)
-      },
-      edit(device) {
-        device.editing = !device.editing
-      },
-    },
+    
     components: {
-      App
+      App,
+      ManageDevices
     }
   })
 })
