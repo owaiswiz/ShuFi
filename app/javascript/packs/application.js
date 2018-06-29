@@ -22,21 +22,32 @@ document.addEventListener('turbolinks:load', () => {
       devices: [
         {
           id: 23,
-          name: 'Lava'
+          name: 'Lava',
+          editing: true,
+          mac: 'B8:5A:2F:23:8C:EA',
+          loading: false,
         },
         {
           id: 4,
-          name: 'Samsung'
+          name: 'Samsung',
+          editing: false,
+          loading: false
         }
       ]
     },
     methods: {
-      allow(id) {
-        console.log(id)
+      allow(device) {
+        console.log(device)
+        device.loading = true
+        setTimeout(() => device.loading = false, 1000)
       },
-      deny(id) {
-        console.log(id)
-      }
+      deny(device) {
+        device.loading = true
+        setTimeout(() => device.loading = false, 2000)
+      },
+      edit(device) {
+        device.editing = !device.editing
+      },
     },
     components: {
       App
