@@ -1,4 +1,17 @@
 @tailwind preflight;
 @tailwind components;
-@tailwind utilities;
 
+.loader {
+  @apply .border-4 .border-indigo-light .rounded-full;
+  @apply .h-8 .w-8;
+
+  border-bottom-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@tailwind utilities;
