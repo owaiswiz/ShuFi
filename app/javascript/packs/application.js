@@ -8,3 +8,38 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import 'application.css'
+
+import TurbolinksAdapter from 'vue-turbolinks'
+import Vue from 'vue/dist/vue.esm'
+import App from '../app.vue'
+
+Vue.use(TurbolinksAdapter)
+
+document.addEventListener('turbolinks:load', () => {
+  const app = new Vue({
+    el: '#app',
+    data: {
+      devices: [
+        {
+          id: 23,
+          name: 'Lava'
+        },
+        {
+          id: 4,
+          name: 'Samsung'
+        }
+      ]
+    },
+    methods: {
+      allow(id) {
+        console.log(id)
+      },
+      deny(id) {
+        console.log(id)
+      }
+    },
+    components: {
+      App
+    }
+  })
+})

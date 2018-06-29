@@ -193,6 +193,21 @@ module.exports = {
   */
 
   fonts: {
+    'heading': [
+      'Audiowide',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Fira Sans',
+      'system-ui'
+    ],
+    'display': [
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Fira Sans',
+      'system-ui'
+    ],
     'sans': [
       'system-ui',
       'BlinkMacSystemFont',

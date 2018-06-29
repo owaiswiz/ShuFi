@@ -1,5 +1,12 @@
-<div class="bg-dark m-8">
-  <div id="hello" class="bg-indigo text-white rounded w-1/4 shadow-lg p-4">
-    {{ message }}
+<div class="bg-white">
+  <div class="w-1/2 lg:w-1/3 m-4 px-4 py-2 shadow-md text-lg">
+    <div class="font-heading text-2xl text-indigo-light py-4 mb-4">Manage Devices</div>
+    <div v-for="device in devices" class="flex items-baseline justify-between my-8">
+      <div class="text-md">{{ device.name }}</div>
+      <div class="flex cursor-pointer">
+        <div class="text-sm text-green-light hover:text-green-lighter mr-4" @click.prevent="allow(device.id)">Allow</div>
+        <div class="text-sm text-red-light hover:text-red-lighter" @click.prevent="deny(device.id)">Deny</div>
+      </div>
+    </div>
   </div>
 </div>
