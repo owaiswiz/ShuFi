@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  mac: MyString
+  name: Lava
+  mac: B8:23:11:33:3F
   allowed: false
 
 two:
-  name: MyString
-  mac: MyString
-  allowed: false
+  name: Samsung
+  mac: 88:11:EF:AB:C3
+  allowed: true
