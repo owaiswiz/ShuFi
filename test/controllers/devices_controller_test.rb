@@ -97,4 +97,14 @@ class DevicesControllerTest < ActionDispatch::IntegrationTest
     post_device(devices_edit_url, mac: '12:34:56', name: 'Test name')
     assert_response :error
   end
+
+  test "should delete present device" do
+    assert_difference('Device.count', -1) do
+      device = devices(:one)
+      post_device(devices_delete_url, id: device.id)
+      assert_response :success
+
+      assert_nil Device.find_by(id: device.id)
+    end
+  end
 end
