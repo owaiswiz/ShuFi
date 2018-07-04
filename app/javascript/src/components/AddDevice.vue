@@ -25,7 +25,10 @@ export default {
   },
   methods: {
     add() {
-      console.log('added', this.name)
+      this.$http.post('/devices/add', {name: this.name, mac: this.mac}).then(resp => {
+        if(resp.body.status === 'Device added successfully')
+          console.log('Added Device', resp.body.id)
+      });
     },
   },
 }
