@@ -18,13 +18,22 @@ class DevicesController < ApplicationController
 
   def edit
     device = Device.find_by(id: params[:id])
-    if device && device.update_attributes(device_params)
+    if device and device.update_attributes(device_params)
       render json: { id: device.id }
     else
       head :error
     end
   end
 
+  def delete 
+    device = Device.find_by(id: params[:id])
+    if device and device.destroy
+      render json: { id: device.id }
+    else
+      head :error
+    end
+
+  end
   def show
     render json: { devices: Device.all }
   end
