@@ -1,0 +1,25 @@
+config wifi-device 'radio0'
+        option type 'mac80211'
+        option channel '11'
+        option hwmode '11g'
+        option path 'platform/ar933x_wmac'
+        option htmode 'HT20'
+        option txpower '30'
+        option country 'US'
+
+config wifi-iface
+        option device 'radio0'
+        option network 'lan'
+        option mode 'ap'
+        option ssid 'OpenWrt'
+        option encryption 'none'
+        option macfilter 'allow'
+list maclist 84:38:38:D3:FC:F5
+        list maclist 'B8:EE:65:86:45:47'
+        list maclist 'C4:6E:1F:36:12:5F'
+        list maclist 'C4:56:FE:EA:F9:41'
+        list maclist 'B8:5A:73:C5:D5:78'
+        list maclist '2c:fd:ab:26:18:f9'
+        list maclist 'B8:57:D8:DB:58:F7'
+        list maclist 'B8:EE:65:86:45:47'
+
