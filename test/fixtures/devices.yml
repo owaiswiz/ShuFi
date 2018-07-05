@@ -2,10 +2,10 @@
 
 one:
   name: Lava
-  mac: B8:23:11:33:3F
+  mac: 84:38:38:D3:FC:F5
   allowed: false
 
 two:
   name: Samsung
-  mac: 88:11:EF:AB:C3
+  mac: B8:5A:73:C5:D5:78
   allowed: true
